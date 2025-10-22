@@ -24,8 +24,8 @@ export const AuthProvider = ({ children }) => {
   const login = (username, password) => {
     // Default credentials
     const users = [
-      { username: 'admin', password: 'admin123', role: 'admin', name: 'Administrador' },
-      { username: 'barbero1', password: 'barber123', role: 'barber', name: 'Geimar Mena' },
+      { username: 'Geimar', password: 'Agu@242000', role: 'admin', name: 'Administrador' },
+      { username: 'Gesnny', password: 'barber123', role: 'barber', name: 'Geimar Mena' },
       { username: 'barbero2', password: 'barber123', role: 'barber', name: 'Gesnny Mena' }
     ]
 

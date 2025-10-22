@@ -140,6 +140,22 @@ export const DataProvider = ({ children }) => {
     return newAppointment
   }
 
+  const updateAppointmentStatus = (id, status) => {
+    const updatedAppointments = appointments.map(a => 
+      a.id === id ? { ...a, status, updatedAt: new Date().toISOString() } : a
+    )
+    setAppointments(updatedAppointments)
+    localStorage.setItem('appointments', JSON.stringify(updatedAppointments))
+  }
+
+  const addReviewToAppointment = (id, review) => {
+    const updatedAppointments = appointments.map(a => 
+      a.id === id ? { ...a, review, reviewedAt: new Date().toISOString() } : a
+    )
+    setAppointments(updatedAppointments)
+    localStorage.setItem('appointments', JSON.stringify(updatedAppointments))
+  }
+
   const deleteAppointment = (id) => {
     const updatedAppointments = appointments.filter(a => a.id !== id)
     setAppointments(updatedAppointments)

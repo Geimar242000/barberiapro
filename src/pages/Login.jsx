@@ -8,6 +8,9 @@ const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+  const [showForgotPassword, setShowForgotPassword] = useState(false)
+  const [recoveryEmail, setRecoveryEmail] = useState('')
+  const [recoverySuccess, setRecoverySuccess] = useState(false)
   const { login } = useAuth()
   const navigate = useNavigate()
 
@@ -84,15 +87,6 @@ const Login = () => {
               Iniciar Sesión
             </button>
           </form>
-
-          <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-            <p className="text-sm font-semibold text-gray-700 mb-2">Credenciales de acceso:</p>
-            <div className="text-sm text-gray-600 space-y-1">
-              <p><strong>Admin:</strong> admin / admin123</p>
-              <p><strong>Geimar Mena:</strong> barbero1 / barber123</p>
-              <p><strong>Gesnny Mena:</strong> barbero2 / barber123</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
