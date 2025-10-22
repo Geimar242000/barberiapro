@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview Banner - Barbería</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+        }
+        
+        .banner-preview {
+            position: relative;
+            height: 500px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+        }
+        
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+        }
+        
+        .slide-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            padding: 40px;
+            max-width: 800px;
+        }
+        
+        .slide-content h2 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .slide-content .subtitle {
+            font-size: 1.8em;
+            color: #d4af37;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .slide-content p {
+            font-size: 1.2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+        
+        .slide1 {
+            background-image: url('./images/barberia-profesional.jpg');
+        }
+        
+        .slide2 {
+            background-image: url('./images/cortes-profesionales.jpg');
+        }
+        
+        .slide3 {
+            background-image: url('./images/horario-servicio.jpg');
+        }
+        
+        .instructions {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .instructions h2 {
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        .file-list {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 4px solid #d4af37;
+            margin: 20px 0;
+            font-family: monospace;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .success {
+            background: #d4edda;
+            border: 1px solid #28a745;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Preview del Banner - Barbería Elite</h1>
+        
+        <div class="instructions">
+            <h2>📋 Instrucciones</h2>
+            <p>Este archivo te muestra cómo se verán las imágenes en el banner. Sigue estos pasos:</p>
+            
+            <ol>
+                <li><strong>Guarda tus 3 imágenes</strong> en la carpeta: <code>public/images/</code></li>
+                <li><strong>Renombra las imágenes</strong> exactamente con estos nombres:</li>
+            </ol>
+            
+            <div class="file-list">
+                📁 public/images/<br>
+                &nbsp;&nbsp;├── barberia-profesional.jpg (Imagen del interior)<br>
+                &nbsp;&nbsp;├── cortes-profesionales.jpg (Imagen de cortes)<br>
+                &nbsp;&nbsp;└── horario-servicio.jpg (Imagen de horario)
+            </div>
+            
+            <div class="warning">
+                ⚠️ <strong>Importante:</strong> Los nombres de archivo deben ser exactamente como se muestran arriba (incluyendo minúsculas y guiones).
+            </div>
+            
+            <ol start="3">
+                <li><strong>Recarga esta página</strong> (F5) para ver las imágenes</li>
+                <li>Si las imágenes se ven bien aquí, funcionarán en la aplicación</li>
+            </ol>
+            
+            <div class="success">
+                ✅ <strong>Cuando termines:</strong> Inicia la aplicación con <code>npm run dev</code>
+            </div>
+        </div>
+        
+        <h2 style="text-align: center; margin: 40px 0 20px 0;">Vista Previa de los Slides</h2>
+        
+        <!-- Slide 1: Barbería Profesional -->
+        <div class="banner-preview">
+            <div class="slide slide1">
+                <div class="slide-content">
+                    <h2>Barbería Profesional</h2>
+                    <div class="subtitle">Donde el estilo se encuentra con la tradición</div>
+                    <p>Ambiente profesional y moderno para tu mejor experiencia</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2: Cortes Profesionales -->
+        <div class="banner-preview">
+            <div class="slide slide2">
+                <div class="slide-content">
+                    <h2>Cortes Profesionales</h2>
+                    <div class="subtitle">Barberos expertos a tu servicio</div>
+                    <p>Técnicas modernas y clásicas para tu mejor look</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3: Agenda tu Cita -->
+        <div class="banner-preview">
+            <div class="slide slide3">
+                <div class="slide-content">
+                    <h2>Agenda tu Cita Ahora</h2>
+                    <div class="subtitle">Reserva en línea fácil y rápido</div>
+                    <p>Horarios flexibles de Lunes a Sábado</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>🎯 Mapeo de Imágenes</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li style="margin: 15px 0; padding: 15px; background: #f9f9f9; border-radius: 5px;">
+                    <strong>Slide 1:</strong> barberia-profesional.jpg<br>
+                    <small>→ Imagen del interior de la barbería (la tercera foto que enviaste)</small>
+                </li>
+                <li style="margin: 15px 0; padding: 15px; background: #f9f9f9; border-radius: 5px;">
+                    <strong>Slide 2:</strong> cortes-profesionales.jpg<br>
+                    <small>→ Imagen de cortes de cabello (la segunda foto que enviaste)</small>
+                </li>
+                <li style="margin: 15px 0; padding: 15px; background: #f9f9f9; border-radius: 5px;">
+                    <strong>Slide 3:</strong> horario-servicio.jpg<br>
+                    <small>→ Imagen del horario Abalvi Barber (la primera foto que enviaste)</small>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
